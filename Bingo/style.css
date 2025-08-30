@@ -1,0 +1,68 @@
+body {
+  font-family: 'Georgia', serif;
+  text-align: center;
+  background: #1b1b1b; 
+  color: #e0dcdc;      
+  padding: 20px;
+}
+
+
+#refresh {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2f2f2f;
+  color: #e0dcdc;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 5px #9b1b1b;
+}
+
+#refresh:hover {
+  background-color: #9b1b1b;
+  color: #fff;
+  box-shadow: 0 0 15px #e63946;
+}
+
+#bingo-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.square {
+  background: #2f2f2f;
+  border: 2px solid #9b1b1b;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 120px;                
+  display: flex;
+  align-items: center;         
+  justify-content: center;     
+  text-align: center;          
+  color: #e0dcdc;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+  word-wrap: break-word;        
+  overflow: hidden;
+}
+
+.square.clicked {
+  background: #9b1b1b;
+  color: #fff;
+  text-decoration: line-through;
+  box-shadow: 0 0 10px #e63946;
+}
+
+.square.bingo-glow {
+  box-shadow: 0 0 15px 5px #e63946;
+  transition: 0.3s;
+}
+
